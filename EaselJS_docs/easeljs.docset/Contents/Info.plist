@@ -13,7 +13,7 @@
 	<key>DashDocSetFamily</key>
 	<string>dashtoc</string>
 	<key>dashIndexFilePath</key>
-	<string>./docs/index.html</string>
+	<string>index.html</string>
 	<key>isJavaScriptEnabled</key><false/>
 </dict>
 </plist>

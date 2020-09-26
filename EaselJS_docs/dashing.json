@@ -1,7 +1,7 @@
 {
   "name": "EaselJS",
   "package": "easeljs",
-  "index": "./docs/index.html",
+  "index": "index.html",
   "selectors": {
     "div.content h1": "Class",
     "h1.file-heading": "File",
