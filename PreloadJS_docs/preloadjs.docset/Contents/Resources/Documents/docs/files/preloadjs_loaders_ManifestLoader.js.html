@@ -1,0 +1,406 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css"/>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css"/>
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico"/>
+    <script src="../assets/js/yui-source.js"></script>
+	<title>PreloadJS v1.0.0 API Documentation : preloadjs/loaders/ManifestLoader.js</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="http://www.createjs.com/preloadjs"><img src="../assets/docs-icon-PreloadJS.png" title="PreloadJS"/></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Documentation for: 1.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs"/>
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/AbstractLoader.html">AbstractLoader</a></li>
+            
+                <li><a href="../classes/AbstractMediaLoader.html">AbstractMediaLoader</a></li>
+            
+                <li><a href="../classes/AbstractRequest.html">AbstractRequest</a></li>
+            
+                <li><a href="../classes/BinaryLoader.html">BinaryLoader</a></li>
+            
+                <li><a href="../classes/CSSLoader.html">CSSLoader</a></li>
+            
+                <li><a href="../classes/DataUtils.html">DataUtils</a></li>
+            
+                <li><a href="../classes/DomUtils.html">DomUtils</a></li>
+            
+                <li><a href="../classes/ErrorEvent.html">ErrorEvent</a></li>
+            
+                <li><a href="../classes/Event.html">Event</a></li>
+            
+                <li><a href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a href="../classes/FontLoader.html">FontLoader</a></li>
+            
+                <li><a href="../classes/ImageLoader.html">ImageLoader</a></li>
+            
+                <li><a href="../classes/JavaScriptLoader.html">JavaScriptLoader</a></li>
+            
+                <li><a href="../classes/JSONLoader.html">JSONLoader</a></li>
+            
+                <li><a href="../classes/JSONPLoader.html">JSONPLoader</a></li>
+            
+                <li><a href="../classes/LoadItem.html">LoadItem</a></li>
+            
+                <li><a href="../classes/LoadQueue.html">LoadQueue</a></li>
+            
+                <li><a href="../classes/ManifestLoader.html">ManifestLoader</a></li>
+            
+                <li><a href="../classes/MediaTagRequest.html">MediaTagRequest</a></li>
+            
+                <li><a href="../classes/PreloadJS.html">PreloadJS</a></li>
+            
+                <li><a href="../classes/ProgressEvent.html">ProgressEvent</a></li>
+            
+                <li><a href="../classes/RequestUtils.html">RequestUtils</a></li>
+            
+                <li><a href="../classes/SamplePlugin.html">SamplePlugin</a></li>
+            
+                <li><a href="../classes/SoundLoader.html">SoundLoader</a></li>
+            
+                <li><a href="../classes/SpriteSheetLoader.html">SpriteSheetLoader</a></li>
+            
+                <li><a href="../classes/SVGLoader.html">SVGLoader</a></li>
+            
+                <li><a href="../classes/TagRequest.html">TagRequest</a></li>
+            
+                <li><a href="../classes/TextLoader.html">TextLoader</a></li>
+            
+                <li><a href="../classes/URLUtils.html">URLUtils</a></li>
+            
+                <li><a href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+                <li><a href="../classes/VideoLoader.html">VideoLoader</a></li>
+            
+                <li><a href="../classes/XHRRequest.html">XHRRequest</a></li>
+            
+                <li><a href="../classes/XMLLoader.html">XMLLoader</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a href="../modules/PreloadJS.html">PreloadJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked=""/>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected"/>
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private"/>
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated"/>
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content source-content">
+                        <script>
+	var name = preloadjs/loaders/ManifestLoader.js      
+</script>
+<a class="dashingAutolink" name="autolink-620"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/File%3AManifestLoader.js"></a><a class="dashingAutolink" name="autolink-621"></a><a class="dashAnchor" name="//apple_ref/cpp/File/File%3AManifestLoader.js"></a><h1 class="file-heading">File:ManifestLoader.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">/*
+ * ManifestLoader
+ * Visit http://createjs.com/ for documentation, updates and examples.
+ *
+ *
+ * Copyright (c) 2012 gskinner.com, inc.
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the &#34;Software&#34;), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED &#34;AS IS&#34;, WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/**
+ * @module PreloadJS
+ */
+
+// namespace:
+this.createjs = this.createjs || {};
+
+(function () {
+	&#34;use strict&#34;;
+
+	// constructor
+	/**
+	 * A loader for JSON manifests. Items inside the manifest are loaded before the loader completes. To load manifests
+	 * using JSONP, specify a {{#crossLink &#34;LoadItem/callback:property&#34;}}{{/crossLink}} as part of the
+	 * {{#crossLink &#34;LoadItem&#34;}}{{/crossLink}}.
+	 *
+	 * The list of files in the manifest must be defined on the top-level JSON object in a `manifest` property. This
+	 * example shows a sample manifest definition, as well as how to to include a sub-manifest.
+	 *
+	 * 		{
+	 * 			&#34;path&#34;: &#34;assets/&#34;,
+	 *	 	    &#34;manifest&#34;: [
+	 *				&#34;image.png&#34;,
+	 *				{&#34;src&#34;: &#34;image2.png&#34;, &#34;id&#34;:&#34;image2&#34;},
+	 *				{&#34;src&#34;: &#34;sub-manifest.json&#34;, &#34;type&#34;:&#34;manifest&#34;, &#34;callback&#34;:&#34;jsonCallback&#34;}
+	 *	 	    ]
+	 *	 	}
+	 *
+	 * When a ManifestLoader has completed loading, the parent loader (usually a {{#crossLink &#34;LoadQueue&#34;}}{{/crossLink}},
+	 * but could also be another ManifestLoader) will inherit all the loaded items, so you can access them directly.
+	 *
+	 * Note that the {{#crossLink &#34;JSONLoader&#34;}}{{/crossLink}} and {{#crossLink &#34;JSONPLoader&#34;}}{{/crossLink}} are
+	 * higher priority loaders, so manifests &lt;strong&gt;must&lt;/strong&gt; set the {{#crossLink &#34;LoadItem&#34;}}{{/crossLink}}
+	 * {{#crossLink &#34;LoadItem/type:property&#34;}}{{/crossLink}} property to {{#crossLink &#34;Types/MANIFEST:property&#34;}}{{/crossLink}}.
+	 *
+	 * Additionally, some browsers require the server to serve a JavaScript mime-type for JSONP, so it may not work in
+	 * some conditions.
+	 * @class ManifestLoader
+	 * @param {LoadItem|Object} loadItem
+	 * @extends AbstractLoader
+	 * @constructor
+	 */
+	function ManifestLoader(loadItem, preferXHR) {
+		this.AbstractLoader_constructor(loadItem, preferXHR, createjs.Types.MANIFEST);
+
+	// Public Properties
+		/**
+		 * An array of the plugins registered using {{#crossLink &#34;LoadQueue/installPlugin&#34;}}{{/crossLink}},
+		 * used to pass plugins to new LoadQueues that may be created.
+		 * @property _plugins
+		 * @type {Array}
+		 * @private
+		 * @since 0.6.1
+		 */
+		this.plugins = null;
+
+
+	// Protected Properties
+		/**
+		 * An internal {{#crossLink &#34;LoadQueue&#34;}}{{/crossLink}} that loads the contents of the manifest.
+		 * @property _manifestQueue
+		 * @type {LoadQueue}
+		 * @private
+		 */
+		this._manifestQueue = null;
+	};
+
+	var p = createjs.extend(ManifestLoader, createjs.AbstractLoader);
+	var s = ManifestLoader;
+
+	// static properties
+	/**
+	 * The amount of progress that the manifest itself takes up.
+	 * @property MANIFEST_PROGRESS
+	 * @type {number}
+	 * @default 0.25 (25%)
+	 * @private
+	 * @static
+	 */
+	s.MANIFEST_PROGRESS = 0.25;
+
+	// static methods
+	/**
+	 * Determines if the loader can load a specific item. This loader can only load items that are of type
+	 * {{#crossLink &#34;Types/MANIFEST:property&#34;}}{{/crossLink}}
+	 * @method canLoadItem
+	 * @param {LoadItem|Object} item The LoadItem that a LoadQueue is trying to load.
+	 * @returns {Boolean} Whether the loader can load the item.
+	 * @static
+	 */
+	s.canLoadItem = function (item) {
+		return item.type == createjs.Types.MANIFEST;
+	};
+
+	// public methods
+	p.load = function () {
+		this.AbstractLoader_load();
+	};
+
+	// protected methods
+	p._createRequest = function() {
+		var callback = this._item.callback;
+		if (callback != null) {
+			this._request = new createjs.JSONPLoader(this._item);
+		} else {
+			this._request = new createjs.JSONLoader(this._item);
+		}
+	};
+
+	p.handleEvent = function (event) {
+		switch (event.type) {
+			case &#34;complete&#34;:
+				this._rawResult = event.target.getResult(true);
+				this._result = event.target.getResult();
+				this._sendProgress(s.MANIFEST_PROGRESS);
+				this._loadManifest(this._result);
+				return;
+			case &#34;progress&#34;:
+				event.loaded *= s.MANIFEST_PROGRESS;
+				this.progress = event.loaded / event.total;
+				if (isNaN(this.progress) || this.progress == Infinity) { this.progress = 0; }
+				this._sendProgress(event);
+				return;
+		}
+		this.AbstractLoader_handleEvent(event);
+	};
+
+	p.destroy = function() {
+		this.AbstractLoader_destroy();
+		this._manifestQueue.close();
+	};
+
+	/**
+	 * Create and load the manifest items once the actual manifest has been loaded.
+	 * @method _loadManifest
+	 * @param {Object} json
+	 * @private
+	 */
+	p._loadManifest = function (json) {
+		if (json &amp;&amp; json.manifest) {
+			var queue = this._manifestQueue = new createjs.LoadQueue(this._preferXHR);
+			queue.on(&#34;fileload&#34;, this._handleManifestFileLoad, this);
+			queue.on(&#34;progress&#34;, this._handleManifestProgress, this);
+			queue.on(&#34;complete&#34;, this._handleManifestComplete, this, true);
+			queue.on(&#34;error&#34;, this._handleManifestError, this, true);
+			for(var i = 0, l = this.plugins.length; i &lt; l; i++) {	// conserve order of plugins
+				queue.installPlugin(this.plugins[i]);
+			}
+			queue.loadManifest(json);
+		} else {
+			this._sendComplete();
+		}
+	};
+
+	/**
+	 * An item from the {{#crossLink &#34;_manifestQueue:property&#34;}}{{/crossLink}} has completed.
+	 * @method _handleManifestFileLoad
+	 * @param {Event} event
+	 * @private
+	 */
+	p._handleManifestFileLoad = function (event) {
+		event.target = null;
+		this.dispatchEvent(event);
+	};
+
+	/**
+	 * The manifest has completed loading. This triggers the {{#crossLink &#34;AbstractLoader/complete:event&#34;}}{{/crossLink}}
+	 * {{#crossLink &#34;Event&#34;}}{{/crossLink}} from the ManifestLoader.
+	 * @method _handleManifestComplete
+	 * @param {Event} event
+	 * @private
+	 */
+	p._handleManifestComplete = function (event) {
+		this._loadedItems = this._manifestQueue.getItems(true);
+		this._sendComplete();
+	};
+
+	/**
+	 * The manifest has reported progress.
+	 * @method _handleManifestProgress
+	 * @param {ProgressEvent} event
+	 * @private
+	 */
+	p._handleManifestProgress = function (event) {
+		this.progress = event.progress * (1 - s.MANIFEST_PROGRESS) + s.MANIFEST_PROGRESS;
+		this._sendProgress(this.progress);
+	};
+
+	/**
+	 * The manifest has reported an error with one of the files.
+	 * @method _handleManifestError
+	 * @param {ErrorEvent} event
+	 * @private
+	 */
+	p._handleManifestError = function (event) {
+		var newEvent = new createjs.Event(&#34;fileerror&#34;);
+		newEvent.item = event.data;
+		this.dispatchEvent(newEvent);
+	};
+
+	createjs.ManifestLoader = createjs.promote(ManifestLoader, &#34;AbstractLoader&#34;);
+
+}());
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+
+
+</body></html>

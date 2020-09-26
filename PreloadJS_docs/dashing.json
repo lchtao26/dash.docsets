@@ -1,0 +1,21 @@
+{
+  "name": "PreloadJS",
+  "package": "preloadjs",
+  "index": "./docs/index.html",
+  "selectors": {
+    "div.content h1": "Class",
+    "h1.file-heading": "File",
+    "li.index-item.method a": {
+      "requiretext": "^[a-zA-Z0-9.]*$",
+      "type": "Method"
+    },
+    "li.index-item.property a": {
+      "requiretext": "^[a-zA-Z0-9.]*$",
+      "type": "Property"
+    }
+  },
+  "ignore": [""],
+  "icon32x32": "./docs/assets/favicon.ico",
+  "allowJS": false,
+  "ExternalURL": ""
+}
