@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AppObject getApp(Object object) | 微信开放文档</title>
+    <meta name="description" content="微信开发者平台文档">
+    <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" type="image/x-icon" href="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+  <link rel="mask-icon" color="#4C4C4C" href="https://res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg">
+  <link rel="apple-touch-icon-precomposed" href="https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
+    
+    <link rel="preload" href="https://res.wx.qq.com/wxdoc/dist/assets/css/0.styles.4af62904.css" as="style"><link rel="preload" href="https://res.wx.qq.com/wxdoc/dist/assets/js/app.0a33ef8d.js" as="script"><link rel="preload" href="https://res.wx.qq.com/wxdoc/dist/assets/js/1366.f593567c.js" as="script">
+    <link rel="stylesheet" href="https://res.wx.qq.com/wxdoc/dist/assets/css/0.styles.4af62904.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div class="theme-container"><header class="navbar navbar_with-link"><div class="navbar__left"><a href="https://developers.weixin.qq.com/doc/" class="home-link"><div class="logo__wrp"><span class="logo__icon"></span></div></a> <span class="dot"></span> <div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">小程序</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item selected"><!----> <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/" class="nav-link external">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/minigame/dev/guide/" class="nav-link external">
+  小游戏
+</a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/doc/ministore/minishopquickstart/introduction.html" class="nav-link external">
+  小商店
+</a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html" class="nav-link external">
+  公众号
+</a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/doc/aispeech/platform/INTRODUCTION.html" class="nav-link external">
+  智能对话
+</a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html" class="nav-link external">
+  开放平台
+</a></li><li class="dropdown-item"><!----> <a href="https://work.weixin.qq.com/api/doc" class="nav-link external">
+  企业微信
+</a></li><li class="dropdown-item"><!----> <a href="https://pay.weixin.qq.com/wiki/doc/api/index.html" class="nav-link external">
+  微信支付
+</a></li><li class="dropdown-item"><!----> <a href="https://developers.weixin.qq.com/doc/xwei/xiaowei-introduction/Introduction.html" class="nav-link external">
+  腾讯小微
+</a></li></ul></div></div> <div class="navbar__center"><nav class="nav-links"><div class="nav-item selected"><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/" class="nav-link external">
+  开发
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/miniprogram/introduction/" class="nav-link external">
+  介绍
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/miniprogram/design/" class="nav-link external">
+  设计
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/miniprogram/product/" class="nav-link external">
+  运营
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/miniprogram/analysis/" class="nav-link external">
+  数据
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/community/develop/question" target="_blank" class="nav-link external">
+  社区
+</a></div></nav></div> <div class="navbar__right"><ul class="lang-tab"><li class="lang-tab__item selected">中文</li> <li class="lang-tab__item">EN</li></ul> <div class="search__wrp"><div class="search__input"><div class="weui-desktop-search"><span class="weui-desktop-form__input-wrp"><span class="weui-desktop-form__input-append-in"><button class="weui-desktop-icon-btn weui-desktop-search__btn"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M11.33 10.007l4.273 4.273a.502.502 0 0 1 .005.709l-.585.584a.499.499 0 0 1-.709-.004L10.046 11.3a6.278 6.278 0 1 1 1.284-1.294zm.012-3.729a5.063 5.063 0 1 0-10.127 0 5.063 5.063 0 0 0 10.127 0z"></path></svg></button></span> <input placeholder="搜索内容" type="search" value="" class="weui-desktop-form__input"></span></div> <a href="javascript:;" class="search-back__btn">取消</a></div> <div class="reco-list__wrp" style="display:none;"><ul class="reco__list"></ul> <div class="show-more"><a href="https://developers.weixin.qq.com/doc/search?query=&amp;doc_type=miniprogram&amp;jumpbackUrl=%2Fdoc%2F" class="reco-item__link">查看更多 </a></div></div> <div class="reco-list__wrp" style="display:none;"><div class="show-more"><a href="https://developers.weixin.qq.com/doc/search?query=&amp;doc_type=miniprogram&amp;jumpbackUrl=%2Fdoc%2F" class="reco-item__link">在小程序下暂无结果，查看其它业务相关内容 &gt; </a></div></div></div></div></header> <div class="subnavbar"><ul class="subnavbar__list"><li class="subnavbar__item"><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/" target="_self">指南</a></li><li class="subnavbar__item selected"><a href="../index.html" target="_self" class="router-link-active">框架</a></li><li class="subnavbar__item"><a href="https://developers.weixin.qq.com/miniprogram/dev/component/" target="_self">组件</a></li><li class="subnavbar__item"><a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_self">API</a></li><li class="subnavbar__item"><a href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/" target="_self">服务端</a></li><li class="subnavbar__item"><a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools" target="_self">工具</a></li><li class="subnavbar__item"><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started" target="_self">云开发</a></li><li class="subnavbar__item"><a href="https://developers.weixin.qq.com/miniprogram/dev/extended/" target="_self">扩展能力</a></li><li class="subnavbar__item"><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/release/" target="_self">更新日志</a></li></ul></div> <div class="mobile-links__wrp"><div class="mobile-links_mobile"><a href="javascript:;" class="mobile-links__btn">开发</a></div> <div class="mobile-links__panel"><div class="links-panel__bd"><nav class="nav-links"><div class="nav-item selected"><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/" class="nav-link external">
+  开发
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/miniprogram/introduction/" class="nav-link external">
+  介绍
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/miniprogram/design/" class="nav-link external">
+  设计
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/miniprogram/product/" class="nav-link external">
+  运营
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/miniprogram/analysis/" class="nav-link external">
+  数据
+</a></div><div class="nav-item"><a href="https://developers.weixin.qq.com/community/develop/question" target="_blank" class="nav-link external">
+  社区
+</a></div></nav></div> <div class="links-panel__ft"><ul class="lang-tab"><li class="lang-tab__item selected">中文</li> <li class="lang-tab__item">EN</li></ul></div></div> <div><div class="weui-mask" style="display:none;"></div> <div class="weui-actionsheet "><!----> <div class="weui-actionsheet__menu"><div class="weui-actionsheet__cell">中文</div><div class="weui-actionsheet__cell">EN</div></div> <div class="weui-actionsheet__action"><div class="weui-actionsheet__cell">取消</div></div></div></div></div> <a href="javascript:;" class="mobile-search-btn"></a> <div class="main-container" style="margin-top:0;"><div class="main-contontaier__bd" style="min-height:0px;"><div class="sidebar__wrp"><div class="sidebar-cell_mobile"><li class="subnavbar__item selected"><a href="javascript:;" target="_self">框架</a></li></div> <aside class="sidebar" style="top:144px;"> <div class="TreeNavigation"><div class="NavigationLevel NavigationLevel--level-0"><ul><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="../configuration/app.html" class="NavigationItem__router-link">
+      小程序配置
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="../configuration/app.html" class="NavigationItem__router-link">
+      全局配置
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../configuration/page.html" class="NavigationItem__router-link">
+      页面配置
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../configuration/sitemap.html" class="NavigationItem__router-link">
+      sitemap 配置
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><span class="NavigationItem"><!----> <a href="../scene-list.html" class="NavigationItem__router-link">
+      场景值
+    <!----></a> <!----> <!----></span></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="App.html" class="NavigationItem__router-link">
+      框架接口
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="App.html" class="NavigationItem__router-link">
+      小程序 App
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="App.html" class="NavigationItem__router-link">
+      App
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="getApp.html" class="NavigationItem__router-link router-link-exact-active router-link-active">
+      getApp
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="Page.html" class="NavigationItem__router-link">
+      页面
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="Page.html" class="NavigationItem__router-link">
+      Page
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="getCurrentPages.html" class="NavigationItem__router-link">
+      getCurrentPages
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="Component.html" class="NavigationItem__router-link">
+      自定义组件
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="Component.html" class="NavigationItem__router-link">
+      Component
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="Behavior.html" class="NavigationItem__router-link">
+      Behavior
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="require.html" class="NavigationItem__router-link">
+      模块化
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="require.html" class="NavigationItem__router-link">
+      require
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="module.html" class="NavigationItem__router-link">
+      module
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="exports.html" class="NavigationItem__router-link">
+      exports
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="wx.html" class="NavigationItem__router-link">
+      基础功能
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-3"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="wx.html" class="NavigationItem__router-link">
+      wx
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="wx.env.html" class="NavigationItem__router-link">
+      wx.env
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-3"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="console.html" class="NavigationItem__router-link">
+      console
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="console.debug.html" class="NavigationItem__router-link">
+      console.debug
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="console.error.html" class="NavigationItem__router-link">
+      console.error
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="console.group.html" class="NavigationItem__router-link">
+      console.group
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="console.groupEnd.html" class="NavigationItem__router-link">
+      console.groupEnd
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="console.info.html" class="NavigationItem__router-link">
+      console.info
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="console.log.html" class="NavigationItem__router-link">
+      console.log
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="console.warn.html" class="NavigationItem__router-link">
+      console.warn
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-3"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="setTimeout.html" class="NavigationItem__router-link">
+      定时器
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="setTimeout.html" class="NavigationItem__router-link">
+      setTimeout
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="clearTimeout.html" class="NavigationItem__router-link">
+      clearTimeout
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="setInterval.html" class="NavigationItem__router-link">
+      setInterval
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="clearInterval.html" class="NavigationItem__router-link">
+      clearInterval
+    <!----></a> <!----> <!----></span></li></ul></div></li></ul></div></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="../wxml/index.html" class="NavigationItem__router-link">
+      WXML 语法参考
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="../wxml/data.html" class="NavigationItem__router-link">
+      数据绑定
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxml/list.html" class="NavigationItem__router-link">
+      列表渲染
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxml/conditional.html" class="NavigationItem__router-link">
+      条件渲染
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxml/template.html" class="NavigationItem__router-link">
+      模板
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxml/import.html" class="NavigationItem__router-link">
+      引用
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="../wxs/index.html" class="NavigationItem__router-link">
+      WXS 语法参考
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="../wxs/01wxs-module.html" class="NavigationItem__router-link">
+      模块
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxs/02variate.html" class="NavigationItem__router-link">
+      变量
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxs/03annotation.html" class="NavigationItem__router-link">
+      注释
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxs/04operator.html" class="NavigationItem__router-link">
+      运算符
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxs/05statement.html" class="NavigationItem__router-link">
+      语句
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxs/06datatype.html" class="NavigationItem__router-link">
+      数据类型
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="../wxs/07basiclibrary.html" class="NavigationItem__router-link">
+      基础类库
+    <!----></a> <!----> <!----></span></li></ul></div></li></ul></div></div> </aside></div> <div class="page__wrp"><main class="page"><div class="page-inner" style="min-height:0px;"> <div id="docContent"><div class="content custom"><h3 id="AppObject-getApp-Object-object"><a href="getApp.html#AppObject-getApp-Object-object" aria-hidden="true" class="header-anchor">#</a> AppObject getApp(Object object)</h3> <p>获取到小程序全局唯一的 <code>App</code> 实例。</p> <h4 id="参数"><a href="getApp.html#参数" aria-hidden="true" class="header-anchor">#</a> 参数</h4> <h5 id="Object-object"><a href="getApp.html#Object-object" aria-hidden="true" class="header-anchor">#</a> Object object</h5> <div class="table-wrp"><table><thead><tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>必填</th> <th>说明</th> <th>最低版本</th></tr></thead> <tbody><tr><td>allowDefault</td> <td>boolean</td> <td>false</td> <td>否</td> <td>在 <code>App</code> 未定义时返回默认实现。当App被调用时，默认实现中定义的属性会被覆盖合并到App中。一般用于<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/independent.html">独立分包</a></td> <td><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html">2.2.4</a></td></tr></tbody></table></div><h4 id="示例代码"><a href="getApp.html#示例代码" aria-hidden="true" class="header-anchor">#</a> 示例代码</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// other.js</span>
+<span class="token keyword">var</span> appInstance <span class="token operator">=</span> <span class="token function">getApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>appInstance<span class="token punctuation">.</span>globalData<span class="token punctuation">)</span> <span class="token comment">// I am global data</span>
+</code></pre></div><h4 id="注意"><a href="getApp.html#注意" aria-hidden="true" class="header-anchor">#</a> 注意</h4> <ul><li>不要在定义于 <code>App()</code> 内的函数中，或调用 <code>App</code> 前调用 <code>getApp()</code> ，使用 <code>this</code> 就可以拿到 app 实例。</li> <li>通过 <code>getApp()</code> 获取实例之后，不要私自调用生命周期函数。</li></ul></div></div> <!----> <div class="content relative_ans" style="display:none;"><h2>相关回答</h2> <ul></ul> <!----></div> <footer class="page-edit"><!----></footer>  <footer class="footer"><ul class="footer-links"><li class="footer-link"><a href="http://www.tencent.com/zh-cn/index.shtml" target="_blank">关于腾讯</a></li> <li class="footer-link"><a href="https://mp.weixin.qq.com/debug/wxadoc/introduction/index.html?t=1484641676" target="_blank">文档中心</a></li> <li class="footer-link"><a href="https://mp.weixin.qq.com/cgi-bin/opshowpage?action=dispelinfo&lang=zh_CN&begin=1&count=9" target="_blank">辟谣中心</a></li> <li class="footer-link"><a href="http://kf.qq.com/faq/120911VrYVrA1509086vyumm.html" target="_blank">客服中心</a></li> <li class="footer-link"><a href="mailto:weixinmp@qq.com" target="_blank">联系邮箱</a></li></ul> <p class="copyright">Copyright © 2012-<span>2020</span> Tencent. All Rights Reserved.</p></footer></div></main></div></div></div> <div id="popoverWrapId" class="pop-links__wrp popover_hide"><ul class="pop-links__list"><li class="pop-links__item"><button class="pop-link">复制</button></li> <li class="pop-links__item"><button class="pop-link">问题反馈</button></li></ul></div> <div class="fixed-btns"><a href="javascript:;" class="fixed-btn fixed-btn__feedback"><div class="fixed-btn__inner"><span class="fixed-btn__icon"></span> <span class="fixed-btn__text">反馈</span></div></a> <a href="javascript:;" class="fixed-btn fixed-btn__top" style="display:none;"><div class="fixed-btn__inner"><span class="fixed-btn__icon"></span></div></a></div></div></div></div>
+    <script src="https://res.wx.qq.com/wxdoc/dist/assets/js/1366.f593567c.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "name": "微信小程序（新",
+  "package": "wxapp",
+  "index": "index.html",
+  "selectors": {
+    "div#docContent div.content.custom h2": {
+      "type": "Category",
+      "regexp": "# ",
+      "replacement": "",
+      "matchpath": ".*index\\.html"
+    },
+    "div#docContent div.content.custom h3": {
+      "type": "Module",
+      "regexp": "# ",
+      "replacement": "",
+      "matchpath": ".*index\\.html"
+    },
+    "div#docContent div.content.custom h4": {
+      "type": "Class",
+      "regexp": "# ",
+      "replacement": "",
+      "matchpath": ".*index\\.html"
+    },
+    "div#docContent div.content.custom h1": {
+      "type": "Method",
+      "regexp": "# ",
+      "matchpath": ".*api/"
+    },
+    "* div#docContent div.content.custom h1": {
+      "type": "Component",
+      "regexp": "# ",
+      "matchpath": ".*component/"
+    }
+  },
+  "ignore": [""],
+  "icon32x32": "",
+  "allowJS": false,
+  "ExternalURL": ""
+}
