@@ -1,0 +1,21 @@
+{
+  "name": "AnimateCSS",
+  "package": "animatecss",
+  "index": "index.html",
+  "selectors": {
+    "h3.animation-title": "Category",
+    "span.animation-item--title": "Class",
+    "article#documentation section h2": "Guide",
+    "article#documentation section h3": "Section"
+  },
+  "ignore": [
+    "",
+    "Core team",
+    "License and Contributing",
+    "Contributing",
+    "Code of Conduct"
+  ],
+  "icon32x32": "./docs/img/favicon.ico",
+  "allowJS": false,
+  "ExternalURL": ""
+}
