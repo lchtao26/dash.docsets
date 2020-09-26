@@ -33,7 +33,7 @@
     }
   },
   "ignore": [""],
-  "icon32x32": "",
+  "icon32x32": "icon.png",
   "allowJS": false,
-  "ExternalURL": ""
+  "ExternalURL": "https://developers.weixin.qq.com"
 }
