@@ -3,36 +3,56 @@
   "package": "wxapp",
   "index": "index.html",
   "selectors": {
-    "div#docContent div.content.custom h2": {
-      "type": "Category",
-      "regexp": "# ",
-      "replacement": "",
-      "matchpath": ".*index\\.html"
-    },
-    "div#docContent div.content.custom h3": {
-      "type": "Module",
-      "regexp": "# ",
-      "replacement": "",
-      "matchpath": ".*index\\.html"
-    },
-    "div#docContent div.content.custom h4": {
-      "type": "Class",
-      "regexp": "# ",
-      "replacement": "",
-      "matchpath": ".*index\\.html"
-    },
-    "div#docContent div.content.custom h1": {
-      "type": "Method",
-      "regexp": "# ",
-      "matchpath": ".*api/"
-    },
-    "* div#docContent div.content.custom h1": {
-      "type": "Component",
-      "regexp": "# ",
-      "matchpath": ".*component/"
-    }
+    "div#docContent div.content.custom h2": [
+      {
+        "type": "Category",
+        "regexp": "# ",
+        "replacement": "",
+        "matchpath": ".*index\\.html"
+      }
+    ],
+    "div#docContent div.content.custom h3": [
+      {
+        "type": "Module",
+        "regexp": "# ",
+        "replacement": "",
+        "matchpath": ".*index\\.html"
+      },
+      {
+        "type": "Method",
+        "regexp": "# ",
+        "replacement": "",
+        "matchpath": ".*dev/reference"
+      }
+    ],
+    "div#docContent div.content.custom h4": [
+      {
+        "type": "Class",
+        "regexp": "# ",
+        "replacement": "",
+        "matchpath": ".*index\\.html"
+      },
+      {
+        "type": "Method",
+        "regexp": "# ",
+        "replacement": "",
+        "matchpath": ".*dev/reference"
+      }
+    ],
+    "div#docContent div.content.custom h1": [
+      {
+        "type": "Method",
+        "regexp": "# ",
+        "matchpath": ".*dev/api"
+      },
+      {
+        "type": "Component",
+        "regexp": "# ",
+        "matchpath": ".*dev/component"
+      }
+    ]
   },
-  "ignore": [""],
+  "ignore": ["# 参数", "# 方法", "# 返回值", "# 示例代码", "# 属性", "# 语法", "# 注意"],
   "icon32x32": "icon.png",
   "allowJS": false,
   "ExternalURL": "https://developers.weixin.qq.com"

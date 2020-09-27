@@ -195,7 +195,7 @@ var b = function (x) {
 
 var b = a(100);
 console.log( 100 === b() );
-</code></pre></div><h3 id="arguments"><a href="06datatype.html#arguments" aria-hidden="true" class="header-anchor">#</a> arguments</h3> <p>function 里面可以使用  <code>arguments</code> 关键词。该关键词目前只支持以下的属性：</p> <ul><li><code>length</code>: 传递给函数的参数个数。</li> <li><code>[index]</code>: 通过 <code>index</code> 下标可以遍历传递给函数的每个参数。</li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var a = function(){
+</code></pre></div><a class="dashingAutolink" name="autolink-1129"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/arguments"></a><h3 id="arguments"><a href="06datatype.html#arguments" aria-hidden="true" class="header-anchor">#</a> arguments</h3> <p>function 里面可以使用  <code>arguments</code> 关键词。该关键词目前只支持以下的属性：</p> <ul><li><code>length</code>: 传递给函数的参数个数。</li> <li><code>[index]</code>: 通过 <code>index</code> 下标可以遍历传递给函数的每个参数。</li></ul> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var a = function(){
   console.log(3 === arguments.length);
   console.log(100 === arguments[0]);
   console.log(200 === arguments[1]);
@@ -231,7 +231,7 @@ console.log(&#34;x&#34; === a.source);
 console.log(true === a.global);
 console.log(true === a.ignoreCase);
 console.log(true === a.multiline);
-</code></pre></div><h3 id="属性-8"><a href="06datatype.html#属性-8" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>&#34;RegExp&#34;</code>。</li> <li><code>source</code></li> <li><code>global</code></li> <li><code>ignoreCase</code></li> <li><code>multiline</code></li> <li><code>lastIndex</code></li></ul> <blockquote><p>除constructor外属性的具体含义请参考 <code>ES5</code> 标准。</p></blockquote> <h3 id="方法-8"><a href="06datatype.html#方法-8" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>exec</code></li> <li><code>test</code></li> <li><code>toString</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="数据类型判断"><a href="06datatype.html#数据类型判断" aria-hidden="true" class="header-anchor">#</a> 数据类型判断</h2> <h3 id="constructor-属性"><a href="06datatype.html#constructor-属性" aria-hidden="true" class="header-anchor">#</a> <code>constructor</code> 属性</h3> <p>数据类型的判断可以使用 <code>constructor</code> 属性。</p> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var number = 10;
+</code></pre></div><h3 id="属性-8"><a href="06datatype.html#属性-8" aria-hidden="true" class="header-anchor">#</a> 属性</h3> <ul><li><code>constructor</code>：返回字符串 <code>&#34;RegExp&#34;</code>。</li> <li><code>source</code></li> <li><code>global</code></li> <li><code>ignoreCase</code></li> <li><code>multiline</code></li> <li><code>lastIndex</code></li></ul> <blockquote><p>除constructor外属性的具体含义请参考 <code>ES5</code> 标准。</p></blockquote> <h3 id="方法-8"><a href="06datatype.html#方法-8" aria-hidden="true" class="header-anchor">#</a> 方法</h3> <ul><li><code>exec</code></li> <li><code>test</code></li> <li><code>toString</code></li></ul> <blockquote><p>以上方法的具体使用请参考 <code>ES5</code> 标准。</p></blockquote> <h2 id="数据类型判断"><a href="06datatype.html#数据类型判断" aria-hidden="true" class="header-anchor">#</a> 数据类型判断</h2> <a class="dashingAutolink" name="autolink-1130"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/constructor%20%E5%B1%9E%E6%80%A7"></a><h3 id="constructor-属性"><a href="06datatype.html#constructor-属性" aria-hidden="true" class="header-anchor">#</a> <code>constructor</code> 属性</h3> <p>数据类型的判断可以使用 <code>constructor</code> 属性。</p> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var number = 10;
 console.log( &#34;Number&#34; === number.constructor );
 
 var string = &#34;str&#34;;
@@ -254,7 +254,7 @@ console.log( &#34;Date&#34; === date.constructor );
 
 var regexp = getRegExp();
 console.log( &#34;RegExp&#34; === regexp.constructor );
-</code></pre></div><h3 id="typeof"><a href="06datatype.html#typeof" aria-hidden="true" class="header-anchor">#</a> <code>typeof</code></h3> <p>使用 <code>typeof</code> 也可以区分部分数据类型。</p> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var number = 10;
+</code></pre></div><a class="dashingAutolink" name="autolink-1131"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/typeof"></a><h3 id="typeof"><a href="06datatype.html#typeof" aria-hidden="true" class="header-anchor">#</a> <code>typeof</code></h3> <p>使用 <code>typeof</code> 也可以区分部分数据类型。</p> <p><strong>示例代码：</strong></p> <div class="language-wxs extra-class"><pre class="language-text"><code>var number = 10;
 var boolean = true;
 var object = {};
 var func = function(){};
